@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tjshrestha.cs301.cs.wm.edu.amazebytjshrestha.ui.AMazeActivity">
+
+    <!--android:text="Hello World!" />  -->
+
+    <!-- <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/uncharted_4"
+        android:id="@+id/uncharted_4"
+        android:adjustViewBounds="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="fitXY"/> -->
+
+    <!--<ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/buddha_eyes"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/builder" /> -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/stupa"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY" />
+
+    <Button
+        android:text="Revisit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/revisit"
+        android:layout_alignBaseline="@+id/explore"
+        android:layout_alignBottom="@+id/explore"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="56dp" />
+
+    <Button
+        android:text="Explore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/explore"
+        android:layout_marginBottom="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/revisit"
+        android:layout_marginEnd="37dp" />
+
+    <TextView
+        android:text="Amazed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:id="@+id/title"
+        android:layout_marginTop="25dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+
+        android:shadowColor="#000000"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="2.0"
+        android:layout_toEndOf="@+id/explore" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:gravity="right"
+
+        android:shadowColor="#000000"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="2.0"
+        android:layout_below="@+id/skill"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/builder"
+        android:gravity="right"
+        android:layout_marginBottom="24dp"
+        android:layout_above="@+id/driver"
+        android:layout_alignStart="@+id/driver" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/skill"
+        android:max="15"
+        android:layout_below="@+id/title"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="153dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/driver"
+        android:gravity="right"
+        android:layout_marginBottom="61dp"
+        android:layout_above="@+id/text"
+        android:layout_alignEnd="@+id/title" />
+
+
+</RelativeLayout>

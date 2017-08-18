@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:text="Up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/up"
+        android:layout_alignBaseline="@+id/stop"
+        android:layout_alignBottom="@+id/stop"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/down"
+        android:layout_alignBaseline="@+id/right"
+        android:layout_alignBottom="@+id/right"
+        android:layout_alignStart="@+id/up" />
+
+    <Button
+        android:text="Stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/stop"
+        android:layout_alignBaseline="@+id/start"
+        android:layout_alignBottom="@+id/start"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp" />
+
+    <Button
+        android:text="Right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/right"
+        android:layout_marginBottom="13dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/stop" />
+
+    <Button
+        android:text="Left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/left"
+        android:layout_alignBaseline="@+id/down"
+        android:layout_alignBottom="@+id/down"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="11dp" />
+
+    <Button
+        android:text="Start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/start"
+        android:layout_marginBottom="14dp"
+        android:layout_above="@+id/left"
+        android:layout_alignStart="@+id/left" />
+
+    <Button
+        android:text="Back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/backButton"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/up" />
+
+    <Button
+        android:text="Win"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/winShortcut"
+        android:layout_marginTop="98dp"
+        android:layout_below="@+id/backButton"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/up"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:text="Lose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loseShortcut"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/winShortcut"
+        android:visibility="invisible"
+        />
+
+    <ProgressBar
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/energyBar"
+        android:max="2500"
+        android:layout_below="@+id/backButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp"
+        android:layout_alignEnd="@+id/backButton" />
+
+
+    <TextView
+        android:text="Energy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/energyText"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/energyBar"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+
+        android:shadowColor="#000000"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="2.0"/>
+    />
+
+    <Switch
+        android:text="Show Solution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/solutionSwitch"
+        android:layout_alignBottom="@+id/winShortcut"
+        android:layout_alignParentStart="true"
+        android:textSize="16sp" />
+    />
+
+    <Switch
+        android:text="Show Maze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mazeSwitch"
+        android:layout_above="@+id/solutionSwitch"
+        android:layout_alignParentStart="true"
+        android:textSize="16sp"/>
+
+    <Switch
+        android:text="Show Wall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wallSwitch"
+        android:layout_below="@+id/solutionSwitch"
+        android:layout_alignParentStart="true"
+        android:textSize="16sp"/>
+
+    <!-- <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:src="@drawable/brick_road"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" /> -->
+
+
+    <Button
+        android:text="-"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/decrement"
+        android:layout_below="@+id/backButton"
+        android:layout_alignParentEnd="true" />
+
+    <tjshrestha.cs301.cs.wm.edu.amazebytjshrestha.falstad.MazePanel
+       android:id="@+id/panel"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="+"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/increment"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">AMazeByTJShrestha</string>
+
+    <string-array name="builder_array">
+        <item>DFS</item>
+        <item>Prim</item>
+        <item>Eller</item>
+    </string-array>
+
+    <string-array name="driver_array">
+        <item>Manual</item>
+        <item>Wizard</item>
+        <item>WallFollower</item>
+        <item>Pledge</item>
+        <item>Explorer</item>
+
+    </string-array>
+</resources>
